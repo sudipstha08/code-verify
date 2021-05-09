@@ -24,5 +24,5 @@
 | `styled components` | css code to style your components      |
 
 <h3>References</h3>
-- https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right:[TS]
+- https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right:[TS] <br/>
 - https://github.com/react-boilerplate/react-boilerplate              :arrow_right:[JS]
