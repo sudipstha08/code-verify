@@ -24,5 +24,5 @@
 | `styled components` | css code to style your components      |
 
 ## References
-- https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right:[TS] <br/>
-- https://github.com/react-boilerplate/react-boilerplate              :arrow_right:[JS]
+- https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right: [TS] <br/>
+- https://github.com/react-boilerplate/react-boilerplate              :arrow_right: [JS]
