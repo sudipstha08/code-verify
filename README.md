@@ -2,22 +2,27 @@
 <br />
 
 ## Commands
-| commands   | Description |
-| ---------- | ----------- |
-| `yarn install` |  Install dependencies   |
-| `yarn start`   |  runs app   |
-| `yarn cleanAndSetup` | remove example app |
+
+| commands             | description                                    |
+| -------------------- | ---------------------------------------------- |
+| `yarn install`       | install dependencies                           |
+| `yarn start`         | runs app                                       |
+| `yarn cleanAndSetup` | remove example app                             |
+| `yarn build`         | build app                                      |
+| `yarn lint`          | run linter                                     |
+| `yarn generate`      | auto-generate boilerplate code for common part |
 
 ## Tech Stack
-| Tech                | Description                   |
-| ------------------- | ----------------------------- |
-| `react-boilerplate` | boilerplate for react.js apps |
-|  `React Router`     | routing |
-|  `Redux`            | state management |
-|  `Redux saga`       | an intuitive Redux side effect manager |
-|  `eslint/prettier`  | linting |
 
+| Tech                | description                            |
+| ------------------- | -------------------------------------- |
+| `react-boilerplate` | boilerplate for react.js apps          |
+| `react router`      | routing                                |
+| `redux`             | state management                       |
+| `redux saga`        | an intuitive Redux side effect manager |
+| `eslint/prettier`   | linting                                |
+| `styled components` | css code to style your components      |
 
 <h3>References</h3>
-1. https://github.com/react-boilerplate/react-boilerplate-cra-template  [TS]
-2. https://github.com/react-boilerplate/react-boilerplate  [JS]
+- https://github.com/react-boilerplate/react-boilerplate-cra-template  [TS]
+- https://github.com/react-boilerplate/react-boilerplate  [JS]
