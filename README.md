@@ -23,6 +23,6 @@
 | `eslint/prettier`   | linting                                |
 | `styled components` | css code to style your components      |
 
-<h3>References</h3>
+## References
 - https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right:[TS] <br/>
 - https://github.com/react-boilerplate/react-boilerplate              :arrow_right:[JS]
