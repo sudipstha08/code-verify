@@ -3,7 +3,7 @@
 
 ## Commands
 
-| commands             |                 description                    |
+| commands             | description                                    |
 | -------------------- | ---------------------------------------------- |
 | `yarn install`       | install dependencies                           |
 | `yarn start`         | runs app                                       |
@@ -22,7 +22,9 @@
 | `redux saga`        | an intuitive redux side effect manager |
 | `eslint/prettier`   | linting                                |
 | `styled components` | css code to style your components      |
+| `antd`              | React UI library                       |
 
 ## References
+
 - https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right: [TS] <br/>
-- https://github.com/react-boilerplate/react-boilerplate              :arrow_right: [JS]
+- https://github.com/react-boilerplate/react-boilerplate :arrow_right: [JS]
