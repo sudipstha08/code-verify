@@ -1,25 +1,30 @@
-/**
- *
- * BooksPage
- *
- */
-import * as React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
+import { InputField } from '../../components/InputField';
 
 interface Props {}
 
 export function BooksPage(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { t, i18n } = useTranslation();
+  const [query, setQuery] = useState('');
+
+  const handleSearchBarChange = ({
+    e: {
+      target: { value },
+    },
+  }: any) => {
+    setQuery(value);
+  };
 
   return (
-    <Div>
-      {t('')}
-      {/*  {t(...messages.someThing())}  */}
-    </Div>
+    <Container>
+      <InputField value={query} onChange={handleSearchBarChange} />
+    </Container>
   );
 }
 
-const Div = styled.div``;
+const Container = styled.div`
+  padding: 20px 5%;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+`;
