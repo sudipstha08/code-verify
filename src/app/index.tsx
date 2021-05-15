@@ -14,6 +14,7 @@ import { GlobalStyle } from 'styles/global-styles';
 
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
+import { BooksPage } from './pages/BooksPage';
 import { useTranslation } from 'react-i18next';
 
 export function App() {
@@ -27,9 +28,9 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/books" component={BooksPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

@@ -10,14 +10,9 @@ import { useTranslation } from 'react-i18next';
 interface Props {}
 
 export function Button(props: Props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  return (
-    <Div>
-      {t('')}
-      {/*  {t(...messages.someThing())}  */}
-    </Div>
-  );
+  return <Div>{t('')}</Div>;
 }
 
 const Div = styled.div``;
