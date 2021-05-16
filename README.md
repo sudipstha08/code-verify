@@ -11,7 +11,7 @@
 | `yarn build`         | build app                                      |
 | `yarn lint`          | run linter                                     |
 | `yarn generate`      | auto-generate boilerplate code for common part |
-
+| `yarn cache clean`   | clear the cache                                |
 ## Tech Stack
 
 | Tech                | description                            |
@@ -22,8 +22,10 @@
 | `redux saga`        | an intuitive redux side effect manager |
 | `eslint/prettier`   | linting                                |
 | `styled components` | css code to style your components      |
-| `antd`              | React UI library                       |
-
+| `antd`              | react UI library                       |
+| `axios`             | promise based http client              |
+| `react-query`       | data fetching library for react        |
+| `formik`            | components for building forms          |
 ## References
 
 - https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right: [TS] <br/>
