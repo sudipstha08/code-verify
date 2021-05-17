@@ -12,9 +12,10 @@
 | `yarn lint`          | run linter                                     |
 | `yarn generate`      | auto-generate boilerplate code for common part |
 | `yarn cache clean`   | clear the cache                                |
+
 ## Tech Stack
 
-| Tech                | description                            |
+| techs               | description                            |
 | ------------------- | -------------------------------------- |
 | `react-boilerplate` | boilerplate for react.js apps          |
 | `react router`      | routing                                |
@@ -26,6 +27,7 @@
 | `axios`             | promise based http client              |
 | `react-query`       | data fetching library for react        |
 | `formik`            | components for building forms          |
+
 ## References
 
 - https://github.com/react-boilerplate/react-boilerplate-cra-template :arrow_right: [TS] <br/>
