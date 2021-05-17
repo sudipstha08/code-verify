@@ -1,11 +1,11 @@
-import * as React from 'react';
-import styled from 'styled-components/macro';
-import { Input } from 'antd';
+import * as React from 'react'
+import styled from 'styled-components/macro'
+import { Input } from 'antd'
 
 interface Props {
-  value?: string;
-  placeholder?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string
+  placeholder?: string
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const InputField = ({ value, placeholder, onChange }: Props) => {
@@ -13,9 +13,9 @@ const InputField = ({ value, placeholder, onChange }: Props) => {
     <Div>
       <Input value={value} placeholder={placeholder} onChange={onChange} />
     </Div>
-  );
-};
+  )
+}
 
-const Div = styled.div``;
+const Div = styled.div``
 
-export { InputField };
+export { InputField }
