@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet-async';
+import * as React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 export function HomePage() {
   return (
@@ -10,5 +10,5 @@ export function HomePage() {
       </Helmet>
       <span>HomePage container</span>
     </>
-  );
+  )
 }
