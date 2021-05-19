@@ -13,7 +13,6 @@ export function ChatPage(props: Props) {
   }, [chatHistory])
 
   const send = () => {
-    console.log('hello')
     sendMsg('hello')
   }
   return (

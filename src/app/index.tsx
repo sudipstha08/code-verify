@@ -37,7 +37,9 @@ export function App() {
         <link rel="stylesheet" href="nprogress.css" />
       </Helmet>
       <TopProgressBar />
-      {/* Provide the client to your App */}
+      {/*
+       * Provide the client to your App
+       */}
       <QueryClientProvider client={queryClient}>
         <Switch>
           <Route exact path="/" component={HomePage} />
