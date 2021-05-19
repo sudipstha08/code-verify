@@ -19,7 +19,9 @@ import { TopProgressBar } from './components'
 import { BooksPage } from './pages/BooksPage'
 import { ChatPage } from './pages/ChatPage'
 
-// Create a client
+/*
+ * Create a query client
+ */
 const queryClient = new QueryClient()
 
 export function App() {
