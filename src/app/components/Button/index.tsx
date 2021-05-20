@@ -1,18 +1,35 @@
-/**
- *
- * Button
- *
- */
-import * as React from 'react'
-import styled from 'styled-components/macro'
-import { useTranslation } from 'react-i18next'
+import React, { FC } from 'react'
+import { Button } from 'antd'
 
-interface Props {}
-
-export function Button(props: Props) {
-  const { t } = useTranslation()
-
-  return <Div>{t('')}</Div>
+type ButtonType = 'primary' | 'ghost' | 'dashed' | 'link'
+interface Props {
+  children?: React.ReactNode
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  loading?: boolean
+  type?: ButtonType
+  disabled?: boolean
+  htmlType?: any
 }
 
-const Div = styled.div``
+const CustomButton: FC<Props> = ({
+  children,
+  onClick,
+  loading,
+  type,
+  disabled,
+  htmlType,
+}) => {
+  return (
+    <Button
+      onClick={onClick}
+      loading={loading}
+      type={type}
+      disabled={disabled}
+      htmlType={htmlType}
+    >
+      {children}
+    </Button>
+  )
+}
+
+export { CustomButton }

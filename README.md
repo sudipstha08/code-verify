@@ -3,15 +3,17 @@
 
 ## Commands
 
-| commands             | description                                    |
-| -------------------- | ---------------------------------------------- |
-| `yarn install`       | install dependencies                           |
-| `yarn start`         | runs app                                       |
-| `yarn cleanAndSetup` | remove example app                             |
-| `yarn build`         | build app                                      |
-| `yarn lint`          | run linter                                     |
-| `yarn generate`      | auto-generate boilerplate code for common part |
-| `yarn cache clean`   | clear the cache                                |
+| commands              | description                                    |
+| --------------------- | ---------------------------------------------- |
+| `yarn install`        | install dependencies                           |
+| `yarn start`          | runs app                                       |
+| `yarn build`          | build app                                      |
+| `yarn lint`           | run linter                                     |
+| `yarn generate`       | auto-generate boilerplate code for common part |
+| `yarn cache clean`    | clear the cache                                |
+| `yarn add package`    | add package                                    |
+| `yarn remove package` | remove package                                 |
+| `yarn cleanAndSetup`  | remove example app                             |
 
 ## Tech Stack
 
