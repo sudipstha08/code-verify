@@ -16,7 +16,7 @@ import { useTranslation } from 'react-i18next'
 import { HomePage } from './pages/HomePage/Loadable'
 import { NotFoundPage } from './components/NotFoundPage/Loadable'
 import { TopProgressBar } from './components'
-import { BooksPage } from './pages/BooksPage'
+import { BooksPage } from './pages/BooksPage/Loadable'
 import { ChatPage } from './pages/ChatPage'
 
 /*

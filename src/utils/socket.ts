@@ -5,6 +5,10 @@
 
 /**
  * The WebSocket() constructor returns a new WebSocket object.
+ * The ws protocol establishes a WebSocket over an unencrypted TLS connection
+ * To establish the connection, the browser and server perform a
+ * WebSocket handshake over HTTP
+ * DEFAULT PORT FOR WS : 80
  */
 const socket = new WebSocket('ws://localhost:8080/ws')
 
@@ -34,7 +38,7 @@ let connect: any = cb => {
    * when the connection is closed
    */
   socket.onclose = event => {
-    console.log('Socket Closed Connection: ', event)
+    console.log('socket connection closed: ', event)
   }
 
   /**
@@ -42,7 +46,7 @@ let connect: any = cb => {
    * has been closed due to an erro
    **/
   socket.onerror = error => {
-    console.log('Socket Error: ', error)
+    console.log('socket Error: ', error)
   }
 }
 
