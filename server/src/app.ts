@@ -3,7 +3,6 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
 import { CustomError } from './interfaces'
-import { ApiMethods } from './middlewares'
 import { Routes } from './routes'
 
 export class App {
@@ -26,16 +25,12 @@ export class App {
     )
     this.app.use(bodyParser.urlencoded({ extended: true, limit: '150mb' }))
 
-    this.app.use('/api/', ApiMethods, this.v1Routes.router)
+    this.app.use('/api/', this.v1Routes.router)
 
-    // API to check server status
     this.app.get('/ping', (_req, res: Response) => {
       res.json({ message: 'Server is running' })
     })
 
-    /**
-     * 404 Handler
-     */
     this.app.use((_, __, next: NextFunction) => {
       next({
         message: 'Route Not Found',
