@@ -15,7 +15,7 @@ export class UserRoutes {
 
   public initializeRoutes() {
     this.userRouter.post(
-      '/',
+      '/validate',
       Validate(UserValidationSchema),
       this.userController.validateCode.bind(this.userController),
     )

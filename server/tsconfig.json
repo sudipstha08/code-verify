@@ -27,6 +27,6 @@
     "baseUrl": "./src",
     "typeRoots": ["@types", "node_modules/@types"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/node_modules/*", "types"]
+  "include": ["src/**/*.ts", "@types"],
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
