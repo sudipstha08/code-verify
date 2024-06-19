@@ -1,0 +1,48 @@
+module.exports = {
+  env: {
+    es6: true,
+    node: true,
+  },
+  plugins: ['@typescript-eslint', 'eslint-plugin-prettier', 'security-node'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'eslint-config-prettier',
+    'plugin:security-node/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    '@typescript-eslint/ban-ts-comment': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    'cypress/no-unnecessary-waiting': 0,
+    'no-console': 0,
+    'no-alert': 'error',
+    '@typescript-eslint/no-explicit-any': 0,
+    'sort-imports': 'off',
+    'prettier/prettier': 'error',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      2,
+      {
+        vars: 'all',
+        args: 'all',
+        varsIgnorePattern: '^_',
+        argsIgnorePattern: '^_',
+      },
+    ],
+    'no-useless-return': 'error',
+    'no-useless-catch': 0,
+    'no-return-await': 0,
+    'no-else-return': 'error',
+    '@typescript-eslint/no-var-requires': 0,
+    'no-async-promise-executor': 0,
+    'import/no-named-as-default': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    'no-irregular-whitespace': 0,
+  },
+}
