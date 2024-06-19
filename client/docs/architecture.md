@@ -1,0 +1,3 @@
+## Architecture
+
+- Add testing tooling
