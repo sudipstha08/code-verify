@@ -1,11 +1,11 @@
 import { ChangeEvent, FC, FormEvent, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { INPUT_LENGTH, KEYBPARD_KEYS } from '@/constants'
 import { useMutation } from '@tanstack/react-query'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Button } from '@/components'
+import { INPUT_LENGTH, KEYBPARD_KEYS } from '@/constants'
 import { userService } from '@/services'
-import { useNavigate } from 'react-router-dom'
 
 const Container = styled.form`
   margin-top: 20px;
