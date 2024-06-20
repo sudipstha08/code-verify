@@ -30,8 +30,8 @@ API.interceptors.response.use(
   },
   async error => {
     return Promise.reject({
-      message: 'Error occured',
-      ...error,
+      message: 'Error occured. Error occured. Please try again later',
+      error: error?.response?.data || 'Error occured. Please try again later',
     })
   },
 )
