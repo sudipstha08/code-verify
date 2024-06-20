@@ -6,11 +6,29 @@ import { toast } from 'react-toastify'
 import { Button } from '@/components'
 import { userService } from '@/services'
 
-const Container = styled.form``
+const Container = styled.form`
+  margin-top: 20px;
+  & .btn-wrapper {
+    text-align: center;
+    margin-top: 18px;
+  }
+`
+
+const StyledInput = styled.input<{ $error: boolean }>`
+  height: 50px;
+  width: 50px;
+  border: ${({ $error }) =>
+    $error ? '1.5px solid red' : '1.5px solid #908888'};
+  border-radius: 0.5rem;
+  margin: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+`
 
 export const Verification: FC = () => {
   const [inputValues, setInputValues] = useState<string[]>(Array(6).fill(''))
   const inputsRef = useRef<Map<number, HTMLInputElement>>(new Map())
+  const [error, setError] = useState<number[]>([])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (inputValues.filter(a => a).length === INPUT_LENGTH || !e.target.value)
@@ -28,6 +46,7 @@ export const Verification: FC = () => {
         if (cursor < INPUT_LENGTH) {
           clonedInputValues[cursor] = inputValue
         }
+        setError(prevValue => prevValue.filter(val => val !== cursor))
       })
       setInputValues(clonedInputValues)
       return
@@ -37,6 +56,7 @@ export const Verification: FC = () => {
       clonedInputValues[idx] = value
       return clonedInputValues
     })
+    setError(prevValue => prevValue.filter(val => val !== idx))
     scrollToNextInput(idx + 1)
   }
 
@@ -85,6 +105,16 @@ export const Verification: FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    inputValues.forEach((value, idx) => {
+      if (!value) {
+        setError(prevValue => {
+          const newSet = new Set([...prevValue, idx])
+          return Array.from(newSet)
+        })
+      } else {
+        setError(prevValue => prevValue.filter(val => val !== idx))
+      }
+    })
     sendVerificationCode.mutate(inputValues.join(''))
   }
 
@@ -92,14 +122,15 @@ export const Verification: FC = () => {
     <Container onSubmit={handleSubmit}>
       {inputValues.map((value, idx) => {
         return (
-          <input
+          <StyledInput
             value={value}
             onChange={handleChange}
             data-id={idx}
             onKeyDown={handleKeyDown}
             key={idx}
+            $error={error.includes(idx)}
             pattern="[0-9]*"
-            ref={node => {
+            ref={(node: HTMLInputElement) => {
               const map = getMap()
               if (node) {
                 map.set(idx, node)
@@ -110,7 +141,9 @@ export const Verification: FC = () => {
           />
         )
       })}
-      <Button label="SUBMIT" type="submit" />
+      <div className="btn-wrapper">
+        <Button label="SUBMIT" type="submit" />
+      </div>
     </Container>
   )
 }
