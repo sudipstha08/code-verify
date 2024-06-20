@@ -11,4 +11,7 @@ Simple chat app with user auth and web sockets
 ## How to get started ?
 - Run `docker-compose up --build`
 - Access frontend on `http://localhost:3000`
-- Access API server on `http://localhost:5001`
+- Access API server on `http://localhost:9000`
+
+## Server Health Check
+- Send request to `http://localhost:9000/ping`
