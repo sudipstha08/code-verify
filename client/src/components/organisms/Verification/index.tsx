@@ -5,6 +5,7 @@ import { useMutation } from '@tanstack/react-query'
 import { toast } from 'react-toastify'
 import { Button } from '@/components'
 import { userService } from '@/services'
+import { useNavigate } from 'react-router-dom'
 
 const Container = styled.form`
   margin-top: 20px;
@@ -29,6 +30,7 @@ export const Verification: FC = () => {
   const [inputValues, setInputValues] = useState<string[]>(Array(6).fill(''))
   const inputsRef = useRef<Map<number, HTMLInputElement>>(new Map())
   const [error, setError] = useState<number[]>([])
+  const navigate = useNavigate()
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (inputValues.filter(a => a).length === INPUT_LENGTH || !e.target.value)
@@ -95,6 +97,7 @@ export const Verification: FC = () => {
     mutationFn: userService.verifyCode,
     onSuccess: () => {
       toast.success('Verification code sent successfully')
+      navigate('/dashboard')
     },
     onError: () => {
       toast.error(
